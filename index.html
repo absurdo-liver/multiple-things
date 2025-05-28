@@ -9,6 +9,9 @@
     <title>multiple functions</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="toDo.js" defer></script>
+    <script src="calculator.js" defer></script>
+    <script src="colourRandomizer.js" defer></script>
   </head>
   <body>
     <label for="selectList">Choose Function</label>
@@ -16,7 +19,8 @@
     <select name="optionsList" id="selectList">
       <option value="none"></option>
       <option value="toDoList">To-Do List</option>
-      <option value="calculator">Calculator</option>
+      <option value="calculator">Simple Calculator</option>
+      <option value='colourRandomizer'>Colour Randomizer</option>
     </select>
     <div id="toDoDiv" class="hidden">
       <h1 id="topPageTitle">To-Do List</h1>
@@ -42,6 +46,15 @@
       <br />
       <button id="calcEqual">=</button><button id="calcAns">Ans</button
       ><button id="calcClear">Clear</button>
+    </div>
+    <div id="colourRandomizer" class='hidden'>
+      <br>
+      <button id="randomizerButton">Random Colour</button>
+      <button id="colourRandomizerResetButton">Reset</button>
+      <br>
+      <button id="copyColourButton">Copy RGB</button>
+      <br>
+      <pre id='colourRandomizerValueOutput' class='colourRandomizerTextClass'></pre>
     </div>
   </body>
 </html>
