@@ -1,7 +1,13 @@
 body {
   text-align: center;
+  background-color: rgb(255,255,255);
 }
 
 .hidden {
   display: none;
+}
+
+.colourRandomizerTextClass{
+  color: rgb(0,0,0);
+  text-shadow: 0em 0em rgb(0,0,0);
 }
