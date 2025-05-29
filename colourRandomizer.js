@@ -2,6 +2,7 @@ const randButton = document.getElementById("randomizerButton");
 const resetButton = document.getElementById("colourRandomizerResetButton");
 const outputText = document.getElementById("colourRandomizerValueOutput");
 const copyColour = document.getElementById("copyColourButton");
+
 var randColour = "rgb(0,0,0)";
 
 randButton.addEventListener("click", () => {
@@ -18,6 +19,7 @@ randButton.addEventListener("click", () => {
   
   randColour = `rgb(${randomR},${randomG},${randomB})`;
   
+	outputText.textContent += randColour + "\n";
   document.querySelector("body").style.backgroundColor = randColour;
   
   let newR = 255 - randomR;
@@ -36,10 +38,11 @@ randButton.addEventListener("click", () => {
 
 resetButton.addEventListener("click", () => {
   outputText.textContent = "";
+	colourText.textContent = "";
   document.querySelector(".colourRandomizerTextClass").style.color = "rgb(0,0,0)";
   document.querySelector("body").style.backgroundColor = "rgb(255,255,255)";
   document.querySelector(".colourRandomizerTextClass").style.textShadow = "0em 0em rgb(0,0,0)";
-  var randColour = "rgb(0,0,0)";
+  randColour = "rgb(0,0,0)";
 });
 
 copyColour.addEventListener("click", () => {
@@ -48,7 +51,7 @@ copyColour.addEventListener("click", () => {
       alert("Text copied to clipboard!");
     })
     .catch(err => {
-      alert('Failed to copy text: ', err);
+      alert('Failed to copy text: ' + err);
     });
 });
 
