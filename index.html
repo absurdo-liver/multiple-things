@@ -12,6 +12,8 @@
     <script src="toDo.js" defer></script>
     <script src="calculator.js" defer></script>
     <script src="colourRandomizer.js" defer></script>
+    <script src='clock.js' defer></script>
+    <script src='counter.js' defer></script>
   </head>
   <body>
     <label for="selectList">Choose Function</label>
@@ -21,6 +23,8 @@
       <option value="toDoList">To-Do List</option>
       <option value="calculator">Simple Calculator</option>
       <option value='colourRandomizer'>Colour Randomizer</option>
+      <option value='clock'>Clock/Stopwatch</option>
+      <option value='counter'>Counter</option>
     </select>
     <div id="toDoDiv" class="hidden">
       <h1 id="topPageTitle">To-Do List</h1>
@@ -55,6 +59,23 @@
       <button id="copyColourButton">Copy RGB</button>
       <br>
       <pre id='colourRandomizerValueOutput' class='colourRandomizerTextClass'></pre>
+    </div>
+    <div id='clock' class='hidden'>
+      <h1 id='clockTimeDisplay'>00:00:00</h1>
+      <br>
+      <label for='stopwatchButtonStart'>Stopwatch</label>
+      <br>
+      <button id='stopwatchButtonStartStop' onclick='startStop()'>Start/Stop</button><button id='stopwatchButtonReset' onclick="reset()">Reset</button>
+      <br>
+      <p id='stopwatchDisplay'>00h:00m:00s:000ms</p>
+    </div>
+    <div id="counter" class="hidden">
+      <br>
+      <button id="counterIncrease10">+10</button><button id="counterIncrease">+</button><button id="counterIncrease100">+100</button>
+      <h1 id='counterDisplay'>0</h1>
+      <button id="counterDecrease10">-10</button><button id="counterDecrease">-</button><button id="counterDecrease100">-100</button>
+      <br><br><br>
+      <button id="counterReset">reset</button>
     </div>
   </body>
 </html>
