@@ -4,6 +4,7 @@ const divCalc = document.getElementById("calculator");
 const divColour = document.getElementById("colourRandomizer");
 const divClock = document.getElementById("clock");
 const divCounter = document.getElementById("counter");
+const divGame = document.getElementById("game");
 
 
 select.addEventListener("change", () => {
@@ -14,6 +15,7 @@ select.addEventListener("change", () => {
     divColour.classList.add("hidden");
     divClock.classList.add("hidden");
     divCounter.classList.add("hidden");
+    divGame.classList.add("hidden");
     
   } else if (select.value === "toDoList") {
     divToDo.classList.remove("hidden");
@@ -21,6 +23,7 @@ select.addEventListener("change", () => {
     divColour.classList.add("hidden");
     divClock.classList.add("hidden");
     divCounter.classList.add("hidden");
+    divGame.classList.add("hidden");
     
   } else if (select.value === "calculator") {
     divCalc.classList.remove("hidden");
@@ -28,6 +31,7 @@ select.addEventListener("change", () => {
     divColour.classList.add("hidden");
     divClock.classList.add("hidden");
     divCounter.classList.add("hidden");
+    divGame.classList.add("hidden");
     
   } else if (select.value === "colourRandomizer"){
     divColour.classList.remove("hidden");
@@ -35,12 +39,15 @@ select.addEventListener("change", () => {
     divCalc.classList.add("hidden");
     divClock.classList.add("hidden");
     divCounter.classList.add("hidden");
+    divGame.classList.add("hidden");
+    
   } else if(select.value === 'clock'){
     divClock.classList.remove("hidden");
     divToDo.classList.add("hidden");
     divCalc.classList.add("hidden");
     divColour.classList.add("hidden");
     divCounter.classList.add("hidden");
+    divGame.classList.add("hidden");
     
   } else if (select.value === 'counter'){
     divCounter.classList.remove("hidden");
@@ -48,7 +55,15 @@ select.addEventListener("change", () => {
     divToDo.classList.add("hidden");
     divCalc.classList.add("hidden");
     divColour.classList.add("hidden");
+    divGame.classList.add("hidden");
     
+  } else if(select.value === 'game'){
+    divGame.classList.remove("hidden");
+    divToDo.classList.add("hidden");
+    divCalc.classList.add("hidden");
+    divColour.classList.add("hidden");
+    divClock.classList.add("hidden");
+    divCounter.classList.add("hidden");
   }
 	
 	const colourTextElement = document.querySelector("#colourRandomizer");
