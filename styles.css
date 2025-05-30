@@ -11,3 +11,11 @@ body {
   color: rgb(0,0,0);
   text-shadow: 0em 0em rgb(0,0,0);
 }
+
+.normal {
+  background-color: rgb(255,255,255);
+}
+
+.abnormal {
+  background-color: rgb(100,0,255);
+}
