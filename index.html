@@ -14,17 +14,19 @@
     <script src="colourRandomizer.js" defer></script>
     <script src='clock.js' defer></script>
     <script src='counter.js' defer></script>
+    <script src="game.js" defer></script>
   </head>
   <body>
     <label for="selectList">Choose Function</label>
     <br />
     <select name="optionsList" id="selectList">
-      <option value="none"></option>
+      <option value="none"> </option>
       <option value="toDoList">To-Do List</option>
       <option value="calculator">Simple Calculator</option>
       <option value='colourRandomizer'>Colour Randomizer</option>
       <option value='clock'>Clock/Stopwatch</option>
       <option value='counter'>Counter</option>
+      <option value='game'>clicker game</option>
     </select>
     <div id="toDoDiv" class="hidden">
       <h1 id="topPageTitle">To-Do List</h1>
@@ -76,6 +78,11 @@
       <button id="counterDecrease10">-10</button><button id="counterDecrease">-</button><button id="counterDecrease100">-100</button>
       <br><br><br>
       <button id="counterReset">reset</button>
+    </div>
+    <div id="game" class="hidden">
+      <Br>
+      <button id='clickBtn' class="normal">click</button>
+      <p id="clicksDisplay">0</p>
     </div>
   </body>
 </html>
